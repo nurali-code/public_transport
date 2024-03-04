@@ -18,10 +18,10 @@
 		<header class="header">
 			<div class="logo">
 				<img src="img/logo.svg" alt="logo">
-				<h1 class="logo-title">
+				<div class="logo-title">
 					<span class="logo__heading">Общественный транспорт</span>
 					<span class="logo__text">Нижний Новгород</span>
-				</h1>
+				</div>
 			</div>
 			<div class="header-info">
 				<span class="header-info__item">
@@ -33,116 +33,53 @@
 					-11°
 				</span>
 			</div>
-			<nav class="navbar">
-				<a href="#" class="navbar-item is_active">
-					<img src="img/bus-1.svg" alt="">
-					<span class="navbar__text">Автобусы Маршрутки</span>
-					<span class="navbar__online">12 онлайн</span>
-				</a>
-				<a href="#" class="navbar-item">
-					<img src="img/bus-2.svg" alt="">
-					<span class="navbar__text">Троллейбусы</span>
-					<span class="navbar__online">12 онлайн</span>
-				</a>
-				<a href="#" class="navbar-item">
-					<img src="img/bus-3.svg" alt="">
-					<span class="navbar__text">Трамваи</span>
-					<span class="navbar__online">12 онлайн</span>
-				</a>
-				<a href="#" class="navbar-item">
-					<img src="img/bus-3.svg" alt="">
-					<span class="navbar__text">Электрички</span>
-					<span class="navbar__online">12 онлайн</span>
-				</a>
+
+			<h1 class="title">
+				<span class="title__heading">Автобус <b>28</b></span>
+				<span class="title__address">АТП Центральная автостанция</span>
+				<span class="title__address">Магазин Цветы по центру</span>
+			</h1>
+			<div class="dropdown">
+				<button class="dropdown__btn">Другие направления маршрута</button>
+				<div class="dropdown-content">
+					<button class="dropdown__item">АТП Центральная автостанция - Магазин Цветы</button>
+					<button class="dropdown__item is_active">Магазин Цветы - АТП Центральная автостанция </button>
+					<button class="dropdown__item">АТП Центральная автостанция - Оздоровительный комплекс
+						"Сипайловский"</button>
+					<button class="dropdown__item">Скорая помощь - Магазин Цветы</button>
+	
+				</div>
+			</div>
+			<nav class="nav">
+				<h2 class="nav__item is_active"><a href="#">Расписание</a></h2>
+				<h2 class="nav__item"><a href="#">Онлайн схема</a></h2>
+				<h2 class="nav__item"><a href="#">Онлайн карта</a></h2>
 			</nav>
 		</header>
-	
-		<main class="listing">
-			<a href="#" class="listing-item is_active">
-				<span class="listing__num">1</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">1</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">1а</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">2</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">3</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">4-1</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">4-2</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">8А</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">10</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">12</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">15Б</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">25</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">110</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">115А</span>
-				<span class="listing__text"></span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__text">ул. Морозова - АТП Центральн...</span>
-				<span class="listing__online">5</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">1</span>
-				<span class="listing__text">ул. Морозова - АТП Центральн...</span>
-			</a>
-			<a href="#" class="listing-item">
-				<span class="listing__num">24</span>
-				<span class="listing__text">Скорая помощь - Магазин Цвет...</span>
-			</a>
-	
+
+		<main class="stops-section">
+			<p class="stops__heading">Остановки:</p>
+			<ul class="stops">
+				<li>
+					<span class="stops__text">АТП Центральная автостанция и АТП Центральная автостанция</span>
+					<a href="#" class="btn">Расписание</a>
+				</li>
+				<li>
+					<span class="stops__text">АТП Центральная автостанция и АТП Центральная автостанция</span>
+					<a href="#" class="btn">Расписание</a>
+				</li>
+				<li>
+					<span class="stops__text">АТП Центральная автостанция и АТП Центральная автостанция</span>
+					<a href="#" class="btn">Расписание</a>
+				</li>
+				<li>
+					<span class="stops__text">АТП Центральная автостанция и АТП Центральная автостанция</span>
+					<a href="#" class="btn">Расписание</a>
+				</li>
+			</ul>
+
 		</main>
-	
+
 		<footer class="footer">
 			<p class="footer-text">© site-bus.ru</p>
 			<nav>
