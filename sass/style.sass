@@ -1,0 +1,61 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+
+.listing
+    display: flex
+    flex-wrap: wrap
+    &-item
+        padding: 7px 4px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        text-align: center
+        color: white
+        width: 25%
+        min-height: 90px
+        background-color: $prime
+        box-shadow: 1px 1px 0px 0px #FFFFFF40 inset, -1px -1px 0px 0px #00000040 inset
+
+        &.is_active
+            box-shadow: 0px 0px 5px 0px #0000004D inset, -1px -1px 0px 0px #00000040 inset
+
+    &__num
+        font-size: 32px
+        line-height: 32px
+        margin: auto 0
+        text-shadow: 1px 1px 1px #00000040
+
+    &__text 
+        margin: auto 0
+        font-size: 12px
+        font-weight: 400
+        line-height: 14.22px
+        letter-spacing: -0.4px
+
+    &__online
+        color: #373737
+        background-color: $light-green
+        border-radius: 50%
+        width: 17px
+        line-height: 17px
+        height: 17px
+        font-size: 12px
+
+    @media screen and ( max-width: 359px )
+        &-item 
+            width: 33.33%
+
+    @media screen and ( min-width: 520px )
+        &-item 
+            width: 20%
+
+    @media screen and ( min-width: 680px )
+        &-item 
+            width: 12.5%
+
+@import 'footer'
+
+        
