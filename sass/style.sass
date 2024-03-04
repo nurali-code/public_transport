@@ -11,7 +11,8 @@
         justify-content: center
         align-items: center
         flex-direction: column
-
+        position: relative
+        z-index: 1
         text-align: center
         color: white
         width: 25%
@@ -19,7 +20,9 @@
         background-color: $prime
         box-shadow: 1px 1px 0px 0px #FFFFFF40 inset, -1px -1px 0px 0px #00000040 inset
 
-        &.is_active
+        &:hover
+            z-index: 111
+            opacity: 1
             box-shadow: 0px 0px 5px 0px #0000004D inset, -1px -1px 0px 0px #00000040 inset
 
     &__num
@@ -28,7 +31,7 @@
         margin: auto 0
         text-shadow: 1px 1px 1px #00000040
 
-    &__text 
+    &__text
         margin: auto 0
         font-size: 12px
         font-weight: 400
@@ -45,17 +48,15 @@
         font-size: 12px
 
     @media screen and ( max-width: 359px )
-        &-item 
+        &-item
             width: 33.33%
 
     @media screen and ( min-width: 520px )
-        &-item 
+        &-item
             width: 20%
 
     @media screen and ( min-width: 680px )
-        &-item 
+        &-item
             width: 12.5%
 
 @import 'footer'
-
-        
