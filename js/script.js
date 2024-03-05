@@ -19,6 +19,8 @@ $(function () {
     $(document).on('click', function (e) {
         if (!(
             ($(e.target).parents('.modal').length) ||
+            ($(e.target).parents('.nav__item').length) ||
+            ($(e.target).hasClass('nav__item')) ||
             ($(e.target).hasClass('btn')) ||
             ($(e.target).hasClass('modal'))
         )) {

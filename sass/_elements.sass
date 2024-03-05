@@ -74,6 +74,9 @@ button
     font-size: 11px
     color: $blue
 
+b,strong
+    font-weight: 500
+
 .dropdown
     display: block
     transition: all ease .3s
@@ -137,6 +140,7 @@ button
         text-align: center
         font-size: 11px
         &.is_active
+            pointer-events: none
             box-shadow: 0px 0px 4px 0px #00000040 inset
             background-color: $pink
 
@@ -203,3 +207,52 @@ button
 
 .red
     color: $red !important
+
+.loader
+    display: inline-block
+    display: none
+    position: relative
+    z-index: 1
+    width: 32px
+    margin: 0 10px
+    i
+        display: block
+        margin: 0 auto
+        vertical-align: middle
+        width: 8px
+        height: 8px
+        background-color: #D9D9D9
+        animation: loader 1s linear forwards infinite
+        animation-delay: 1s
+        &::before, &::after
+            content: ''
+            display: inline-block
+            width: 8px
+            height: 8px
+            background-color: #D9D9D9
+            position: absolute
+            top: 0
+            left: 0
+            animation: loader 1s linear forwards infinite
+
+        &::after
+            left: auto
+            right: 0
+            animation-delay: 2s
+
+@keyframes loader
+    0%, 100%
+        background-color: #D9D9D9
+    50%
+        background-color: $blue
+
+/* HTML: <div class="loader"></div> */
+.loader2
+    width: 60px
+    aspect-ratio: 4
+    background: radial-gradient(circle closest-side,#000 90%,#0000) 0/calc(100%/3) 100% space
+    clip-path: inset(0 100% 0 0)
+    animation: l1 1s steps(4) infinite
+
+@keyframes l1
+    toclip-path: inset(0 -34% 0 0)
