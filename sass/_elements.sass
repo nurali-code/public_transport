@@ -32,7 +32,7 @@ $red: var(--red)
 body
     color: $blue
     font-family: 'Rubik', sans-serif
-    &.is_active 
+    &.is_active
         overflow: hidden
 
 .app
@@ -76,8 +76,11 @@ button
 
 .dropdown
     display: block
+    transition: all ease .3s
     background-color: $blue
     width: 100%
+    position: relative
+    z-index: 999
     &__btn
         color: #BBBBBB
         display: inline-block
@@ -87,10 +90,16 @@ button
         background-position: center right
         background-size: 12px auto
         background-image: url('../img/dropdown-open.svg')
-        margin-bottom: 25px
+        margin-bottom: 20px
 
     &-content
         display: none
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        z-index: 999
+        background-color: $gray
 
     &__item
         color: $white
@@ -103,8 +112,6 @@ button
         background-position: center left 25px
         &.is_active
             background-image: url('../img/dropdown-check.svg')
-
-    &-content
 
     &.is_active
         background-color: $gray

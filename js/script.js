@@ -27,3 +27,16 @@ $(function () {
     });
 });
 
+
+$('.dropdown__btn').on('click', function (e) {
+    if ($(this).hasClass('is_active')) {
+         $('.dropdown__btn').removeClass('is_active').next().slideUp(200); 
+         $('.dropdown').removeClass('is_active')
+        }
+    else {
+        $(this).parent('.dropdown').addClass('is_active')
+        $('.dropdown__btn').removeClass('is_active').next().slideUp(200);
+        $(this).toggleClass('is_active').next().slideToggle(200);
+    }
+});
+
