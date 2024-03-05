@@ -210,49 +210,13 @@ b,strong
 
 .loader
     display: inline-block
-    display: none
-    position: relative
-    z-index: 1
-    width: 32px
     margin: 0 10px
-    i
-        display: block
-        margin: 0 auto
-        vertical-align: middle
-        width: 8px
-        height: 8px
-        background-color: #D9D9D9
-        animation: loader 1s linear forwards infinite
-        animation-delay: 1s
-        &::before, &::after
-            content: ''
-            display: inline-block
-            width: 8px
-            height: 8px
-            background-color: #D9D9D9
-            position: absolute
-            top: 0
-            left: 0
-            animation: loader 1s linear forwards infinite
+    width: 32px
+    height: 8px
+    -webkit-mask: linear-gradient(90deg,$blue 70%,#0000 0) left/33.33% 100%
+    background: linear-gradient($blue 0 0) left 0% top 0 /30% 100% no-repeat #D9D9D9
+    animation: l7 .7s infinite steps(3)
 
-        &::after
-            left: auto
-            right: 0
-            animation-delay: 2s
-
-@keyframes loader
-    0%, 100%
-        background-color: #D9D9D9
-    50%
-        background-color: $blue
-
-/* HTML: <div class="loader"></div> */
-.loader2
-    width: 60px
-    aspect-ratio: 4
-    background: radial-gradient(circle closest-side,#000 90%,#0000) 0/calc(100%/3) 100% space
-    clip-path: inset(0 100% 0 0)
-    animation: l1 1s steps(4) infinite
-
-@keyframes l1
-    toclip-path: inset(0 -34% 0 0)
+@keyframes l7
+    100%
+        background-position: right -30% top 0

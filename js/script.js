@@ -5,7 +5,8 @@ function hideModals() {
 
 $(function () {
     function showModal(id) {
-        $(id).addClass('is_active').fadeIn(200);
+        hideModals();
+        $(id).addClass('is_active').fadeIn(100);
         $('body, .modal').addClass('is_active');
     }
 
