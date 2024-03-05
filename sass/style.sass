@@ -101,15 +101,18 @@
         margin-bottom: 11px
         font-weight: 500
         font-size: 14px
+    
     &-section
         padding: 22px 17px 0 33px
+        margin-bottom: 60px
 
-    li
+    &-item
         min-height: 40px
         display: flex
+        justify-content: space-between
         align-items: center
         border-bottom: 1px solid $prime
-        padding: 3px 0
+        padding: 4px 0
         position: relative
         z-index: 1
         &::before
@@ -126,9 +129,25 @@
             transform: translateY(-50%)
             box-shadow: 0 0 0 4px $white
 
+        &.--pink
+            color: $pink
+            &::before
+                border-color: $pink
+
+    &__link 
+        font-size: 14px
+        text-decoration: underline
+        color: $pink
+
     &__text
         font-size: 14px
         font-weight: 400
         line-height: 16px
+
+    &__bus 
+        width: 16px
+        position: absolute
+        left: -42px
+        top: 12px
 
 @import 'footer'

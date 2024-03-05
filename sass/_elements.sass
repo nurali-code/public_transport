@@ -108,3 +108,54 @@ button
             &__btn,
             &__item
                 color: $blue
+
+.tab
+    display: flex
+    justify-content: center
+    align-items: stretch
+    gap: 10px
+    margin: 16px 0 20px
+    &__btn
+        background-color: $blue
+        color: $white
+        text-align: center
+        padding-top: 12px
+        width: 36px
+        height: 36px
+        display: inline-block
+        text-align: center
+        font-size: 11px
+        &.is_active
+            box-shadow: 0px 0px 4px 0px #00000040 inset
+            background-color: $pink
+
+.table
+    width: 100%
+    td, th
+        text-align: center
+        font-size: 15px
+        color: $blue
+        font-weight: normal
+        padding: 1px 3px 1px
+        padding: 8px 4px
+        &.is_active
+            background-color: $pink
+            color: $white
+
+    tr
+        border-bottom: 1px solid #474F774D
+        &:first-of-type
+            th
+                background-color: $blue
+                color: $white
+
+        th
+            background-color: #F3F3F3
+
+        &:nth-of-type(even)
+            background-color: #F0F0F0
+            th
+                background-color: #D9D9D9
+
+    &__fade
+        color: #CCCCCC !important

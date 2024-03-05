@@ -33,7 +33,6 @@
 					-11°
 				</span>
 			</div>
-
 			<h1 class="title">
 				<span class="title__heading">Автобус <b>28</b></span>
 				<span class="title__address">АТП Центральная автостанция</span>
@@ -47,7 +46,7 @@
 					<button class="dropdown__item">АТП Центральная автостанция - Оздоровительный комплекс
 						"Сипайловский"</button>
 					<button class="dropdown__item">Скорая помощь - Магазин Цветы</button>
-	
+
 				</div>
 			</div>
 			<nav class="nav">
@@ -60,25 +59,34 @@
 		<main class="stops-section">
 			<p class="stops__heading">Остановки:</p>
 			<ul class="stops">
-				<li>
+				<li class="stops-item">
+					<img src="img/bus_anim.svg" class="stops__bus" alt="bus">
 					<span class="stops__text">АТП Центральная автостанция и АТП Центральная автостанция</span>
 					<a href="#" class="btn">Расписание</a>
 				</li>
-				<li>
-					<span class="stops__text">АТП Центральная автостанция и АТП Центральная автостанция</span>
+				<li class="stops-item">
+					<span class="stops__text">Скорая помощь</span>
 					<a href="#" class="btn">Расписание</a>
 				</li>
-				<li>
-					<span class="stops__text">АТП Центральная автостанция и АТП Центральная автостанция</span>
+				<li class="stops-item">
+					<span class="stops__text">Оздоровительный комплекс "Сипайловский"</span>
 					<a href="#" class="btn">Расписание</a>
 				</li>
-				<li>
-					<span class="stops__text">АТП Центральная автостанция и АТП Центральная автостанция</span>
+				<li class="stops-item --pink">
+					<a href="#" class="stops__link">Все остановки (21)</a>
+				</li>
+				<li class="stops-item">
+					<img src="img/bus_anim.svg" class="stops__bus" alt="bus">
+					<span class="stops__text">Скорая помощь</span>
+					<a href="#" class="btn">Расписание</a>
+				</li>
+				<li class="stops-item">
+					<span class="stops__text">Скорая помощь</span>
 					<a href="#" class="btn">Расписание</a>
 				</li>
 			</ul>
-
 		</main>
+		<img src="img/map.jpg" alt="map">
 
 		<footer class="footer">
 			<p class="footer-text">© site-bus.ru</p>
@@ -88,6 +96,76 @@
 				<a href="mailto:support@site-bus.ru">support@site-bus.ru</a>
 			</nav>
 		</footer>
+
+		<div class="modal">
+			<div class="modal-header">
+				<span class="modal__num">28</span>
+				<div class="modal-title">
+					<span class="modal__num">28</span>
+					<span class="modal__addres">в сторону Магазин </span>
+				</div>
+				<nav class="nav">
+					<h2 class="nav__item is_active"><a href="#">Расписание</a></h2>
+					<h2 class="nav__item"><a href="#">Онлайн схема</a></h2>
+					<h2 class="nav__item"><a href="#">Онлайн карта</a></h2>
+				</nav>
+				<div class="tab">
+					<a href="#" class="tab__btn">ПТ</a>
+					<a href="#" class="tab__btn">ПН</a>
+					<a href="#" class="tab__btn">ВТ</a>
+					<a href="#" class="tab__btn is_active">СР</a>
+					<a href="#" class="tab__btn">ЧТ</a>
+					<a href="#" class="tab__btn">СБ</a>
+					<a href="#" class="tab__btn">ВС</a>
+				</div>
+				<table class="table">
+					<tr>
+						<th>час</th>
+						<th colspan="11">минуты</th>
+					</tr>
+					<tr>
+						<th>08</th>
+						<td class="table__fade">03</td>
+						<td class="table__fade">15</td>
+						<td class="table__fade">20</td>
+						<td class="table__fade">22</td>
+						<td class="table__fade">30</td>
+						<td class="table__fade">35</td>
+						<td class="table__fade">42</td>
+						<td class="table__fade">43</td>
+						<td class="table__fade">50</td>
+						<td class="table__fade">51</td>
+						<td class="table__fade">55</td>
+					</tr>
+					<tr>
+						<th>09</th>
+						<td class="table__fade">03</td>
+						<td class="table__fade">15</td>
+						<td class="table__fade">20</td>
+						<td class="is_active">20</td>
+						<td>30</td>
+						<td>35</td>
+						<td>42</td>
+						<td>43</td>
+						<td>50</td>
+						<td>51</td>
+						<td>55</td>
+					</tr>
+					<tr>
+						<th>19</th>
+						<td>03</td>
+						<td>15</td>
+						<td>20</td>
+						<td>20</td>
+						<td>30</td>
+						<td>35</td>
+						<td>42</td>
+						<td>43</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
 	</div>
 
 </body>
