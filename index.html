@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body class="is_active">
 	<div class="app">
 		<header class="header">
 			<div class="logo">
@@ -62,15 +62,15 @@
 				<li class="stops-item">
 					<img src="img/bus_anim.svg" class="stops__bus" alt="bus">
 					<span class="stops__text">АТП Центральная автостанция и АТП Центральная автостанция</span>
-					<a href="#" class="btn">Расписание</a>
+					<button class="btn" data-modal="route">Расписание</button>
 				</li>
 				<li class="stops-item">
 					<span class="stops__text">Скорая помощь</span>
-					<a href="#" class="btn">Расписание</a>
+					<button class="btn" data-modal="route">Расписание</button>
 				</li>
 				<li class="stops-item">
 					<span class="stops__text">Оздоровительный комплекс "Сипайловский"</span>
-					<a href="#" class="btn">Расписание</a>
+					<button class="btn" data-modal="route">Расписание</button>
 				</li>
 				<li class="stops-item --pink">
 					<a href="#" class="stops__link">Все остановки (21)</a>
@@ -78,14 +78,15 @@
 				<li class="stops-item">
 					<img src="img/bus_anim.svg" class="stops__bus" alt="bus">
 					<span class="stops__text">Скорая помощь</span>
-					<a href="#" class="btn">Расписание</a>
+					<button class="btn" data-modal="route">Расписание</button>
 				</li>
 				<li class="stops-item">
 					<span class="stops__text">Скорая помощь</span>
-					<a href="#" class="btn">Расписание</a>
+					<button class="btn" data-modal="route">Расписание</button>
 				</li>
 			</ul>
 		</main>
+
 		<img src="img/map.jpg" alt="map">
 
 		<footer class="footer">
@@ -97,76 +98,128 @@
 			</nav>
 		</footer>
 
-		<div class="modal">
+		<div class="modal" id="route">
 			<div class="modal-header">
+				<button class="modal__back"><img src="img/modal-back.svg" alt="back"></button>
 				<span class="modal__num">28</span>
 				<div class="modal-title">
-					<span class="modal__num">28</span>
-					<span class="modal__addres">в сторону Магазин </span>
+					<span class="modal__heading">Остановка Автостанция АТП</span>
+					<span class="modal__addres">
+						<img src="img/modal-arrow.svg" alt="modal">
+						в сторону Магазин
+					</span>
 				</div>
-				<nav class="nav">
-					<h2 class="nav__item is_active"><a href="#">Расписание</a></h2>
-					<h2 class="nav__item"><a href="#">Онлайн схема</a></h2>
-					<h2 class="nav__item"><a href="#">Онлайн карта</a></h2>
-				</nav>
-				<div class="tab">
-					<a href="#" class="tab__btn">ПТ</a>
-					<a href="#" class="tab__btn">ПН</a>
-					<a href="#" class="tab__btn">ВТ</a>
-					<a href="#" class="tab__btn is_active">СР</a>
-					<a href="#" class="tab__btn">ЧТ</a>
-					<a href="#" class="tab__btn">СБ</a>
-					<a href="#" class="tab__btn">ВС</a>
-				</div>
-				<table class="table">
-					<tr>
-						<th>час</th>
-						<th colspan="11">минуты</th>
-					</tr>
-					<tr>
-						<th>08</th>
-						<td class="table__fade">03</td>
-						<td class="table__fade">15</td>
-						<td class="table__fade">20</td>
-						<td class="table__fade">22</td>
-						<td class="table__fade">30</td>
-						<td class="table__fade">35</td>
-						<td class="table__fade">42</td>
-						<td class="table__fade">43</td>
-						<td class="table__fade">50</td>
-						<td class="table__fade">51</td>
-						<td class="table__fade">55</td>
-					</tr>
-					<tr>
-						<th>09</th>
-						<td class="table__fade">03</td>
-						<td class="table__fade">15</td>
-						<td class="table__fade">20</td>
-						<td class="is_active">20</td>
-						<td>30</td>
-						<td>35</td>
-						<td>42</td>
-						<td>43</td>
-						<td>50</td>
-						<td>51</td>
-						<td>55</td>
-					</tr>
-					<tr>
-						<th>19</th>
-						<td>03</td>
-						<td>15</td>
-						<td>20</td>
-						<td>20</td>
-						<td>30</td>
-						<td>35</td>
-						<td>42</td>
-						<td>43</td>
-					</tr>
-				</table>
+			</div>
+			<nav class="nav">
+				<h2 class="nav__item is_active"><a href="#">Расписание</a></h2>
+				<h2 class="nav__item"><a href="#">Онлайн схема</a></h2>
+				<h2 class="nav__item"><a href="#">Онлайн карта</a></h2>
+			</nav>
+			<div class="tab">
+				<a href="#" class="tab__btn">ПТ</a>
+				<a href="#" class="tab__btn">ПН</a>
+				<a href="#" class="tab__btn">ВТ</a>
+				<a href="#" class="tab__btn is_active">СР</a>
+				<a href="#" class="tab__btn">ЧТ</a>
+				<a href="#" class="tab__btn">СБ</a>
+				<a href="#" class="tab__btn">ВС</a>
+			</div>
+			<table class="table">
+				<tr>
+					<th>час</th>
+					<th colspan="11">минуты</th>
+				</tr>
+				<tr>
+					<th>08</th>
+					<td class="table__fade">03</td>
+					<td class="table__fade">15</td>
+					<td class="table__fade">20</td>
+					<td class="table__fade">22</td>
+					<td class="table__fade">30</td>
+					<td class="table__fade">35</td>
+					<td class="table__fade">42</td>
+					<td class="table__fade">43</td>
+					<td class="table__fade">50</td>
+					<td class="table__fade">51</td>
+					<td class="table__fade">55</td>
+				</tr>
+				<tr>
+					<th>09</th>
+					<td class="table__fade">03</td>
+					<td class="table__fade">15</td>
+					<td class="table__fade">20</td>
+					<td class="is_active">20</td>
+					<td>30</td>
+					<td>35</td>
+					<td>42</td>
+					<td>43</td>
+					<td>50</td>
+					<td>51</td>
+					<td>55</td>
+				</tr>
+				<tr>
+					<th>19</th>
+					<td>03</td>
+					<td>15</td>
+					<td>20</td>
+					<td>20</td>
+					<td>30</td>
+					<td>35</td>
+					<td>42</td>
+					<td>43</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>19</th>
+					<td>03</td>
+					<td>15</td>
+					<td>20</td>
+					<td>20</td>
+					<td>30</td>
+					<td>35</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>19</th>
+					<td class="red">03</td>
+					<td>15</td>
+					<td>20</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<div class="table-description">
+				<p class="table-description__text">
+					<span class="table-description__td is_active">15</span>
+					Время ближайшего транспорта
+				</p>
+				<p class="table-description__text">
+					<span class="table-description__td --fade">15</span>
+					Время прошедшего транспорта
+				</p>
+				<p class="table-description__text">
+					<span class="table-description__td red">15</span>
+					<span class="red">красное время:</span> маршрут следует до Автостанции
+				</p>
 			</div>
 		</div>
 
 	</div>
+
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/script.js"></script>
 
 </body>
 

@@ -1,6 +1,7 @@
 @import 'normolize'
 @import 'elements'
 @import 'header'
+@import 'modal'
 
 .listing
     display: flex
@@ -122,12 +123,29 @@
             height: 10px
             box-sizing: border-box
             border: 2px solid $blue
+            background-color: #fff
             border-radius: 50%
             position: absolute
             left: -20px
             top: 50%
             transform: translateY(-50%)
             box-shadow: 0 0 0 4px $white
+
+        &::after
+            content: ''
+            display: block
+            width: 2px
+            height: 100%
+            background-color: $blue
+            // border-left: 2px dotted $blue
+            position: absolute
+            top: 45%
+            left: -16px
+            z-index: -11
+        
+        &:last-of-type
+            &::after
+                display: none
 
         &.--pink
             color: $pink
@@ -148,6 +166,7 @@
         width: 16px
         position: absolute
         left: -42px
-        top: 12px
+        top: 50%
+        transform: translateY(-25%)
 
 @import 'footer'

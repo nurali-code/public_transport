@@ -1,20 +1,29 @@
-$('#send_form').on('submit', function (e) {
-    e.preventDefault();
-    var formData = $(this).serialize();
-    var googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbwAjIYCrK5WqgYLeBwMxhR0ba-dnLv61nxcFfByIb22jvTdwbKGmanLahSfqUEOemgD/exec';
+function hideModals() {
+    $('.modal').removeClass('is_active').fadeOut(200);
+    $('body, .modal').removeClass('is_active');
+};
 
-    console.log(formData);
+$(function () {
+    function showModal(id) {
+        $(id).addClass('is_active').fadeIn(200);
+        $('body, .modal').addClass('is_active');
+    }
 
-    $.ajax({
-        type: 'POST',
-        url: googleAppsScriptUrl,
-        data: formData,
-        success: function (response) {
-            $(formParet).find('.btn').removeAttr('disabled');
-            nextTab(formParet);
-            console.log(response);
-        },
-        error: function (error) { console.error('Произошла ошибка:', error); }
+    $('[data-modal]').on('click', function (e) {
+        e.preventDefault();
+        showModal('#' + $(this).attr("data-modal"));
     });
-})
+
+    $('.modal__back').on('click', () => { hideModals(); });
+
+    $(document).on('click', function (e) {
+        if (!(
+            ($(e.target).parents('.modal').length) ||
+            ($(e.target).hasClass('btn')) ||
+            ($(e.target).hasClass('modal'))
+        )) {
+            hideModals();
+        }
+    });
+});
 

@@ -13,6 +13,7 @@
     --blue: #394166
     --light-green: #00F845
     --dark-green: #04B400
+    --red: #FF0000
     --gray: #D9D9D9
     --white: white
     --black: black
@@ -26,15 +27,18 @@ $white: var(--white)
 $light-green: var(--light-green)
 $dark-green: var(--dark-green)
 $gray: var(--gray)
+$red: var(--red)
 
 body
     color: $blue
     font-family: 'Rubik', sans-serif
-    // max-width: 900px 
-    margin: 0 auto
+    &.is_active 
+        overflow: hidden
 
 .app
     min-height: 100vh
+    position: relative
+    z-index: 1
     max-width: 900px
     margin: 0 auto
     display: flex
@@ -131,6 +135,7 @@ button
 
 .table
     width: 100%
+    margin: 0 0 20px
     td, th
         text-align: center
         font-size: 15px
@@ -150,6 +155,7 @@ button
                 color: $white
 
         th
+            min-width: 64px
             background-color: #F3F3F3
 
         &:nth-of-type(even)
@@ -159,3 +165,34 @@ button
 
     &__fade
         color: #CCCCCC !important
+
+    &-description
+        padding: 0 15px
+        &__text
+            font-size: 14px
+            font-weight: 400
+            line-height: 16.59px
+            margin: 0 0 10px
+            position: relative
+            z-index: 1
+            padding: 2px 0 2px 32px
+
+        &__td
+            width: 28px
+            min-height: 20px
+            text-align: center
+            display: inline-block
+            padding: 2px 4px
+            background-color: #F0F0F0
+            position: absolute
+            left: 0
+            top: 0
+            &.is_active
+                background-color: $pink
+                color: $white
+
+            &.--fade
+                color: #CCCCCC
+
+.red
+    color: $red !important
