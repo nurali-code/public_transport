@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="is_active">
+<body>
 	<div class="app">
 		<header class="header">
 			<a href="index.html" class="logo">
@@ -50,9 +50,9 @@
 				</div>
 			</div>
 			<nav class="nav">
-				<h2 class="nav__item is_active"><a href="./route.html">Расписание</a></h2>
-				<h2 class="nav__item" data-modal="scheme"><a href="#">Онлайн схема</a></h2>
-				<h2 class="nav__item" data-modal="map"><a href="#">Онлайн карта</a></h2>
+				<h2 class="nav__item is_active modal_close">Расписание</h2>
+				<h2 class="nav__item" data-modal="scheme">Онлайн схема</h2>
+				<h2 class="nav__item" data-modal="map">Онлайн карта</h2>
 			</nav>
 		</header>
 
@@ -60,7 +60,7 @@
 			<p class="stops__heading">Остановки:</p>
 			<ul class="stops">
 				<li class="stops-item">
-					<img src="img/bus_anim.svg" class="stops__bus" alt="bus">
+					<span class="bus__anim"></span>
 					<span class="stops__text">АТП Центральная автостанция и АТП Центральная автостанция</span>
 					<button class="btn" data-modal="route">Расписание</button>
 				</li>
@@ -76,7 +76,7 @@
 					<a href="#" class="stops__link">Все остановки (21)</a>
 				</li>
 				<li class="stops-item">
-					<img src="img/bus_anim.svg" class="stops__bus" alt="bus">
+					<span class="bus__anim"></span>
 					<span class="stops__text">Скорая помощь</span>
 					<button class="btn" data-modal="route">Расписание</button>
 				</li>
@@ -113,9 +113,9 @@
 			</div>
 		</div>
 		<nav class="nav">
-			<h2 class="nav__item is_active"><a href="./route.html">Расписание</a></h2>
-			<h2 class="nav__item" data-modal="scheme"><a href="#">Онлайн схема</a></h2>
-			<h2 class="nav__item" data-modal="map"><a href="#">Онлайн карта</a></h2>
+			<h2 class="nav__item is_active modal_close">Расписание</h2>
+			<h2 class="nav__item" data-modal="scheme">Онлайн схема</h2>
+			<h2 class="nav__item" data-modal="map">Онлайн карта</h2>
 		</nav>
 		<div class="tab">
 			<a href="#" class="tab__btn">ПТ</a>
@@ -230,9 +230,9 @@
 			Троллейбусов онлайн <b>5</b>
 		</p>
 		<nav class="nav">
-			<h2 class="nav__item"><a href="./route.html">Расписание</a></h2>
-			<h2 class="nav__item is_active" data-modal="scheme"><a href="#">Онлайн схема</a></h2>
-			<h2 class="nav__item" data-modal="map"><a href="#">Онлайн карта</a></h2>
+			<h2 class="nav__item modal_close">Расписание</h2>
+			<h2 class="nav__item is_active" data-modal="scheme">Онлайн схема</h2>
+			<h2 class="nav__item" data-modal="map">Онлайн карта</h2>
 		</nav>
 		<div class="scheme-section">
 			<ul class="scheme-list">
@@ -245,7 +245,7 @@
 					<span class="scheme-list__text">Оздоровительный комплекс "Сипайловский"</span>
 				</li>
 				<li class="scheme-list-bus">
-					<img src="img/bus_anim.svg" class="scheme-list__img" alt="bus">
+					<span class="bus__anim"></span>
 					<span class="scheme-list__mark">
 						а855вв77 <br>
 						10 км/ч
@@ -285,7 +285,7 @@
 					<span class="scheme-list__text">Оздоровительный комплекс "Сипайловский"</span>
 				</li>
 				<li class="scheme-list-bus">
-					<img src="img/bus_anim.svg" class="scheme-list__img" alt="bus">
+					<span class="bus__anim"></span>
 					<span class="scheme-list__mark">
 						а855вв77 <br>
 						10 км/ч
@@ -325,7 +325,7 @@
 					<span class="scheme-list__text">Оздоровительный комплекс "Сипайловский"</span>
 				</li>
 				<li class="scheme-list-bus">
-					<img src="img/bus_anim.svg" class="scheme-list__img" alt="bus">
+					<span class="bus__anim"></span>
 					<span class="scheme-list__mark">
 						а855вв77 <br>
 						10 км/ч
@@ -367,13 +367,13 @@
 			</div>
 		</div>
 		<p class="modal-update">
-			Троллейбусов онлайн
+			Обновление информации
 			<span class="loader"></span>
 		</p>
 		<nav class="nav">
-			<h2 class="nav__item"><a href="./route.html">Расписание</a></h2>
-			<h2 class="nav__item" data-modal="scheme"><a href="#">Онлайн схема</a></h2>
-			<h2 class="nav__item is_active" data-modal="map"><a href="#">Онлайн карта</a></h2>
+			<h2 class="nav__item modal_close">Расписание</h2>
+			<h2 class="nav__item" data-modal="scheme">Онлайн схема</h2>
+			<h2 class="nav__item is_active" data-modal="map">Онлайн карта</h2>
 		</nav>
 		<img src="img/map.jpg" class="modal-map" alt="map">
 	</div>

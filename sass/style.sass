@@ -68,7 +68,7 @@
     font-weight: normal
     line-height: 0
     &__heading
-        font-weight: 600
+        font-weight: 500
         display: block
         font-size: 16px
         line-height: 18.96px
@@ -151,7 +151,7 @@
         text-decoration: underline
         color: $pink
 
-    &__bus
+    .bus__anim
         width: 16px
         position: absolute
         left: -42px
@@ -219,23 +219,24 @@
         &:nth-child(even)
             margin: 0 auto
 
-        &-item 
+        &-item
             min-height: 30px
 
         &__text
             font-size: 10px
             line-height: 11.85px
 
-        &__img
-            width: 16px
+        .bus__anim
             position: absolute
             left: -23px
+            height: 32px
             background-color: #fff
             z-index: 1111
+            background-position: top 2px center, bottom 2px center
 
         &-bus
             min-height: 20px
-        &__mark 
+        &__mark
             font-size: 8px
             padding: 2px 8px
             background-color: $blue

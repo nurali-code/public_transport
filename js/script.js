@@ -15,7 +15,7 @@ $(function () {
         showModal('#' + $(this).attr("data-modal"));
     });
 
-    $('.modal__back').on('click', () => { hideModals(); });
+    $('.modal__back, .modal_close').on('click', () => { hideModals(); });
 
     $(document).on('click', function (e) {
         if (!(
