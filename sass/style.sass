@@ -146,10 +146,11 @@
             &::before
                 border-color: $pink
 
-    &__link
+    &__show
         font-size: 14px
         text-decoration: underline
         color: $pink
+        padding: 4px 4px 4px 0
 
     .bus__anim
         width: 16px
@@ -198,6 +199,9 @@
         &:last-of-type
             &::after
                 display: none
+
+        &.--hidden 
+            display: none
 
     &__text
         font-size: 14px

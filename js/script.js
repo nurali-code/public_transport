@@ -31,11 +31,20 @@ $(function () {
 });
 
 
+$('.stops__show').on('click', function (e) {
+    $(this).parents('ul').find('.--hidden').removeClass('--hidden')
+    $(this).parent().hide()
+    console.log(
+        $(this).parents('ul').find('.--hidden')
+
+    );
+});
+
 $('.dropdown__btn').on('click', function (e) {
     if ($(this).hasClass('is_active')) {
-         $('.dropdown__btn').removeClass('is_active').next().slideUp(200); 
-         $('.dropdown').removeClass('is_active')
-        }
+        $('.dropdown__btn').removeClass('is_active').next().slideUp(200);
+        $('.dropdown').removeClass('is_active')
+    }
     else {
         $(this).parent('.dropdown').addClass('is_active')
         $('.dropdown__btn').removeClass('is_active').next().slideUp(200);
