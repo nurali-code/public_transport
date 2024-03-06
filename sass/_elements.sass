@@ -93,12 +93,16 @@ b,strong
         color: #BBBBBB
         display: inline-block
         text-align: left
+        font-size: 12px
         padding: 8px 21px 8px 15px
         background-repeat: no-repeat
-        background-position: center right
+        background-position: top 13px right
         background-size: 12px auto
         background-image: url('../img/dropdown-open.svg')
-        margin-bottom: 20px
+        margin-bottom: 14px
+        &.is_active
+            background-position: center right
+            background-image: url('../img/dropdown-close.svg')
 
     &-content
         display: none
@@ -111,6 +115,7 @@ b,strong
 
     &__item
         color: $white
+        font-size: 13px
         padding: 12px 15px 12px 53px
         display: block
         width: 100%
